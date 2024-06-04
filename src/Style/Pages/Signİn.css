@@ -4,13 +4,14 @@
 }
 .signIn .signIn-left {
   margin: 32px;
-  height: 50vh;
+  height: 78vh;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .signIn .signIn-left .inputs {
-  padding: 32px;
+  margin: 0 auto;
 }
 .signIn .signIn-left .inputs .inputs-top h2 {
   font-family: "Inter";
@@ -27,6 +28,52 @@
   line-height: 27px;
   text-align: left;
   color: #969696;
+}
+.signIn .signIn-left .inputs .inputs-mid {
+  margin-top: 32px;
+}
+.signIn .signIn-left .inputs .inputs-mid label {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+.signIn .signIn-left .inputs .inputs-mid .css-wb57ya-MuiFormControl-root-MuiTextField-root {
+  margin-bottom: 20px;
+}
+.signIn .signIn-left .inputs .inputs-bt {
+  display: flex;
+  align-items: center;
+}
+.signIn .signIn-left .inputs .inputs-bt .check {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  border: 2px 0px 0px 0px;
+  opacity: 0px;
+}
+.signIn .signIn-left .inputs .inputs-bt p {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.signIn .signIn-left .inputs .inputs-sign {
+  margin-top: 20px;
+}
+.signIn .signIn-left .inputs .inputs-sign a {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.6px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 16px 8px;
+  background-color: #367AFF;
+  display: block;
+  border-radius: 10px;
 }
 .signIn .walpaper {
   width: 60%;

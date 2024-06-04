@@ -3,9 +3,9 @@ import All from './All'
 
 function App() {
   return (
-    <div>
+    <>
       <All />
-    </div>
+    </>
   )
 }
 
