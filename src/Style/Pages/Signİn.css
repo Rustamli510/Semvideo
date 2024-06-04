@@ -1,0 +1,38 @@
+.signIn {
+  display: flex;
+  justify-content: space-between;
+}
+.signIn .signIn-left {
+  margin: 32px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.signIn .signIn-left .inputs {
+  padding: 32px;
+}
+.signIn .signIn-left .inputs .inputs-top h2 {
+  font-family: "Inter";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.04em;
+  padding-bottom: 12px;
+}
+.signIn .signIn-left .inputs .inputs-top p {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  color: #969696;
+}
+.signIn .walpaper {
+  width: 60%;
+  height: 100vh;
+}
+.signIn .walpaper img {
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=Signİn.css.map */

@@ -1,0 +1,52 @@
+.signIn {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+
+    .signIn-left {
+        margin: 32px;
+        // padding: 32px;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .inputs {
+            padding: 32px;
+
+            .inputs-top {
+                h2 {
+                    font-family: 'Inter';
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 44px;
+                    letter-spacing: -0.04em;
+                    padding-bottom: 12px;
+                }
+
+                p {
+                    font-family: 'Inter';
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    text-align: left;
+                    color:#969696;
+                }
+            }
+
+            .inputs-mid{
+
+            }
+        }
+    }
+
+    .walpaper {
+        width: 60%;
+        height: 100vh;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
