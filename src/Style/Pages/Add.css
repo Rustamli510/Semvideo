@@ -1,0 +1,37 @@
+.video-boxes {
+  display: flex;
+}
+.video-boxes .video-box {
+  background-color: white;
+  border-radius: 30px;
+}
+.video-boxes .video-box .box-text {
+  background-color: #4a4bea;
+  border-radius: 30px 30px 0px 0px;
+}
+.video-boxes .video-box .box-text h2 {
+  padding: 6px 30px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.0642856956px;
+  text-align: left;
+  color: white;
+}
+.video-boxes .video-box .add-video {
+  border-radius: 0px 0px 30px 30px;
+  padding: 72px 130px;
+}
+.video-boxes .video-box .add-video .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  border-radius: 100%;
+  padding: 7px 8px;
+}
+.video-boxes .video-box .add-video .inp-text {
+  color: white;
+  z-index: 9999;
+  font-size: 24px;
+}
+.video-boxes .video-box .add-video .css-8je8zh-MuiTouchRipple-root {
+  background-color: black;
+}/*# sourceMappingURL=Add.css.map */

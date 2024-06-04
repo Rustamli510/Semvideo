@@ -1,5 +1,9 @@
 main {
   width: 90%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #EFF0FF;
 }/*# sourceMappingURL=Main.css.map */

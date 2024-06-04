@@ -1,14 +1,17 @@
-import React from 'react'
-import '../Style/Pages/Main.css'
+import React, { useContext } from "react";
+import "../Style/Pages/Main.css";
+import Box from "./MainComponent/Box";
+import Add from "./MainComponent/Add";
+import { AppContext } from "../Context/Context";
 
 function Main() {
+  const { clicked } = useContext(AppContext);
+
   return (
     <>
-      <main>
-        
-      </main>
+      <main>{clicked ? <Add /> : <Box />}</main>
     </>
-  )
+  );
 }
 
-export default Main
+export default Main;

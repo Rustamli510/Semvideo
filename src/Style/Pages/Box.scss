@@ -1,0 +1,28 @@
+
+.box {
+  background-color: white;
+  border-radius: 30px;
+  padding: 71px 100px;
+text-align: center;
+  .box-top {
+    margin-bottom: 146px;
+    h3 {
+      color: #616167;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.06428569555282593px;
+    }
+  }
+  .box-bottom {
+    .box-bottom-text {
+      font-family: Poppins;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 19.5px;
+      letter-spacing: -0.06428569555282593px;
+      color: #616167;
+    }
+  }
+}
