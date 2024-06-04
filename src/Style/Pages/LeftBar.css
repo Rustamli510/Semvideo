@@ -1,0 +1,49 @@
+.left-bar {
+  padding: 20px;
+  width: 10%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left-bar .nav-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-bar .nav-top .add-video .add-btn {
+  margin-left: 20px;
+  border: none;
+  background-color: #367aff;
+  opacity: 90%;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: Poppins;
+  line-height: 18px;
+  letter-spacing: -0.06px;
+  padding: 7px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.left-bar .nav-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.left-bar .nav-bottom .nav-bottom-text {
+  display: flex;
+  align-items: center;
+  color: #616167;
+  font-family: Poppins;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.left-bar .nav-bottom .nav-bottom-text:nth-child(1) {
+  margin-bottom: 18px;
+}
+.left-bar .nav-bottom .nav-bottom-text .icon {
+  margin-right: 10px;
+}/*# sourceMappingURL=LeftBar.css.map */
