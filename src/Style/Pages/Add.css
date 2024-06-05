@@ -25,13 +25,59 @@
 }
 .video-boxes .video-box .add-video .css-sghohy-MuiButtonBase-root-MuiButton-root {
   border-radius: 100%;
-  padding: 7px 8px;
+  padding: 7px 0;
 }
 .video-boxes .video-box .add-video .inp-text {
   color: white;
-  z-index: 9999;
+  z-index: 9;
   font-size: 24px;
 }
 .video-boxes .video-box .add-video .css-8je8zh-MuiTouchRipple-root {
   background-color: black;
+}
+.video-boxes .arrow {
+  display: flex;
+  align-items: center;
+  margin-left: -8px;
+}
+.video-boxes .arrow .rounded {
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  background-color: #616167;
+}
+.video-boxes .arrow .line {
+  width: 168px;
+  height: 2px;
+  background-color: #616167;
+}
+.video-boxes .arrow #arrow {
+  font-size: 25px;
+  margin-left: -14px;
+  margin-right: -6px;
+  fill: #616167;
+}
+
+.widget {
+  position: absolute !important;
+  top: 38px;
+  right: 58px;
+  width: 125px;
+  height: 34px;
+  background-color: #2D2D2D !important;
+  border-radius: 12px !important;
+}
+.widget svg {
+  transform: rotate(-90deg);
+  fill: white;
+  font-size: 15px;
+  margin-right: 6px;
+}
+.widget p {
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.0642856956px;
+  color: white;
 }/*# sourceMappingURL=Add.css.map */
