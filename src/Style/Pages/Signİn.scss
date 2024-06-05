@@ -11,6 +11,7 @@
         justify-content: space-between;
 
         .inputs {
+
             margin: 0 auto;
 
             .inputs-top {
@@ -47,6 +48,30 @@
                 .css-wb57ya-MuiFormControl-root-MuiTextField-root {
                     margin-bottom: 20px;
                 }
+
+                .MuiFormControl-root {
+                    margin: 0 0 20px 0;
+                    width: 100%;
+                }
+
+                .MuiFormLabel-root {
+                    background-color: white;
+                    width: 90px;
+                }
+
+                .css-1wc848c-MuiFormHelperText-root.Mui-error {
+                    margin: 5px 0 0 0;
+                }
+
+                .error {
+                    color: #d32f2f;
+                    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                    font-weight: 500;
+                    font-size: 0.75rem;
+                    line-height: 1.66;
+                    letter-spacing: 0.03333em;
+                    margin: 5px 0 0 0;
+                }
             }
 
             .inputs-bt {
@@ -73,7 +98,7 @@
 
                 margin-top: 20px;
 
-                a {
+                .sign-in-button {
                     font-family: 'Inter';
                     font-size: 18px;
                     font-weight: 600;
@@ -83,8 +108,10 @@
                     color: #FFFFFF;
                     padding: 16px 8px;
                     background-color: #367AFF;
-                    display: block;
+                    border: none;
                     border-radius: 10px;
+                    width: 100%;
+                    cursor: pointer;
                 }
             }
         }
