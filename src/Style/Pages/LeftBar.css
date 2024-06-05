@@ -34,16 +34,38 @@
 .left-bar .nav-bottom .nav-bottom-text {
   display: flex;
   align-items: center;
-  color: #616167;
-  font-family: Poppins;
+  color: #616167 !important;
+  font-family: "Poppins";
   font-size: 18px;
   line-height: 27px;
   font-weight: 600;
   letter-spacing: 0.3px;
+  border: none;
+  background-color: transparent;
 }
 .left-bar .nav-bottom .nav-bottom-text:nth-child(1) {
+  cursor: pointer;
   margin-bottom: 18px;
 }
 .left-bar .nav-bottom .nav-bottom-text .icon {
   margin-right: 10px;
+}
+.left-bar .nav-bottom button {
+  display: flex;
+  align-items: center;
+  color: #616167;
+  font-family: "Poppins";
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: none;
+  background-color: transparent;
+  text-transform: none;
+}
+.left-bar .nav-bottom button .icon {
+  margin-right: 8px;
+  margin-left: -9px;
+  width: 21px;
+  height: 21px;
 }/*# sourceMappingURL=LeftBar.css.map */

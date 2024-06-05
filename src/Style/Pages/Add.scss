@@ -20,18 +20,77 @@
     .add-video {
       border-radius: 0px 0px 30px 30px;
       padding: 72px 130px; 
+
       .css-sghohy-MuiButtonBase-root-MuiButton-root{
         border-radius: 100%;
-        padding: 7px 8px;
+        padding: 7px 0;
       }
+
       .inp-text{
         color: white;
+<<<<<<< HEAD
         z-index: 999;
+=======
+        z-index: 9;
+>>>>>>> b99c55cbd26fc29615a0e1e986e1e90341b185f2
         font-size: 24px;
       }
+
       .css-8je8zh-MuiTouchRipple-root{
         background-color: black;
       }
     }
+  }
+
+  .arrow{
+    display: flex;
+    align-items: center;
+    margin-left: -8px;
+
+    .rounded{
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+      background-color: #616167;
+    }
+
+    .line{
+      width: 168px;
+      height: 2px;
+      background-color: #616167;
+    }
+
+    #arrow{
+      font-size: 25px;
+      margin-left: -14px;
+      margin-right: -6px;
+      fill: #616167;
+    }
+  }
+}
+
+.widget {
+  position: absolute !important;
+  top: 38px;
+  right: 58px;
+  width: 125px;
+  height: 34px;
+  background-color: #2D2D2D !important;
+  border-radius: 12px !important;
+
+  svg {
+      transform: rotate(-90deg);
+      fill: white;
+      font-size: 15px;
+      margin-right: 6px;
+  }
+
+  p {
+      font-family: 'Poppins';
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: -0.06428569555282593px;
+      color: white;
   }
 }

@@ -6,6 +6,7 @@ import { HiOutlineEmojiSad } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../Context/Context";
+import TransitionsModal from "./HelpModal";
 function LeftBar() {
   const {handleClick}=useContext(AppContext)
   return (
@@ -25,9 +26,10 @@ function LeftBar() {
           </div>
         </div>
         <div className="nav-bottom">
-          <Link className="nav-bottom-text">
+          {/* <button className="nav-bottom-text">
             <IoHelpCircleOutline className="icon" /> Let us help
-          </Link>
+          </button> */}
+          <TransitionsModal className="nav-bottom-text" />
           <Link className="nav-bottom-text">
             <HiOutlineEmojiSad className="icon" /> Log out
           </Link>

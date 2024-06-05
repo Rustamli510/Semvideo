@@ -1,0 +1,66 @@
+.modal-box {
+  border: none !important;
+  padding: 0 !important;
+  width: 602px !important;
+  height: 315px !important;
+  border-radius: 12px;
+  z-index: 999;
+}
+.modal-box #spring-modal-title h3 {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  display: block;
+  background-color: #F4F4F4;
+  padding: 15px 0 15px 31px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.modal-box #spring-modal-description {
+  margin: 21px 31px 0 31px;
+}
+.modal-box #spring-modal-description h4 {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+.modal-box #spring-modal-description p {
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  margin-top: 12px;
+}
+.modal-box #spring-modal-description p a {
+  color: black;
+  text-decoration: underline !important;
+}
+.modal-box #spring-modal-description .copy {
+  display: flex;
+  justify-content: center;
+  margin-top: 99px;
+}
+.modal-box #spring-modal-description .copy button {
+  width: 264px;
+  height: 52px;
+  background-color: #2D2D2D;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-box #spring-modal-description .copy button svg {
+  transform: rotate(-90deg);
+  fill: white;
+  font-size: 18px;
+  margin-right: 6px;
+}/*# sourceMappingURL=WidgetModal.css.map */
