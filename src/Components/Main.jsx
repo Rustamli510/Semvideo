@@ -4,10 +4,8 @@ import Box from "./MainComponent/Box";
 import Add from "./MainComponent/Add";
 import { AppContext } from "../Context/Context";
 
-
 function Main() {
   const { clicked } = useContext(AppContext);
-
   return (
     <>
       <main>

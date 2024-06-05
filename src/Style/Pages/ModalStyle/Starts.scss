@@ -1,0 +1,77 @@
+.starts-modal {
+  .close-icon {
+    font-size: 29px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .drawer-top {
+    padding: 37px 150px 7px 36px;
+    width: 260px;
+    h1 {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+      text-align: left;
+      color: #3c77ff;
+      border-bottom: 1px solid #3c77ff;
+    }
+  }
+  .drawer-bottom {
+    padding: 23px 41px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 85vh;
+    .drawer-file {
+      .drawer-text {
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        text-align: left;
+        margin-bottom: 33px;
+        a {
+          text-decoration: underline !important;
+          color: black;
+        }
+      }
+      .drawer-box {
+        background-color: #707070;
+        padding: 72px 105px;
+        border-radius: 30px;
+        .css-sghohy-MuiButtonBase-root-MuiButton-root {
+          color: black;
+          background-color: white;
+          border-radius: 50px;
+          padding: 18px 14px;
+          text-transform: lowercase;
+        }
+      }
+    }
+    .drawer-create {
+      .dw-btn {
+        cursor: pointer;
+        padding: 12px 34px;
+        background-color: #367aff;
+        border: none;
+        border-radius: 10px;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: -0.06428569555282593px;
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+}
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+  width: 387px !important;
+}
+.css-1hskriy {
+  width: 387px !important;
+}

@@ -1,14 +1,17 @@
-import React from 'react'
-import LeftBar from '../Components/LeftBar'
-import Main from '../Components/Main'
+import React from "react";
+import LeftBar from "../Components/LeftBar";
+import Main from "../Components/Main";
+
+
 
 function DashBoard() {
+
   return (
-    <div className='dashbroad' style={{display:'flex'}}>
-      <LeftBar/>
-      <Main/>
+    <div className="dashbroad" style={{ display: "flex" }}>
+      <LeftBar />
+        <Main />
     </div>
-  )
+  );
 }
 
-export default DashBoard
+export default DashBoard;

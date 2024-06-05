@@ -29,7 +29,11 @@
 }
 .video-boxes .video-box .add-video .inp-text {
   color: white;
+<<<<<<< HEAD
+  z-index: 999;
+=======
   z-index: 9;
+>>>>>>> b99c55cbd26fc29615a0e1e986e1e90341b185f2
   font-size: 24px;
 }
 .video-boxes .video-box .add-video .css-8je8zh-MuiTouchRipple-root {
