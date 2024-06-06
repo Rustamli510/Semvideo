@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { AppContext } from "../Context/Context";
 import TransitionsModal from "./HelpModal";
 function LeftBar() {
-  const {handleClick}=useContext(AppContext)
+  const { handleClick } = useContext(AppContext)
   return (
     <>
       <div className="left-bar">

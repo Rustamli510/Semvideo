@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import '../../Style/Pages/Add.css'
-import  {Button}  from "@mui/material";
+import { Button } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import Starts from "../Modals/Starts";
+import SpringModal from "../WidgetModal";
 
 
 function Add() {
@@ -22,15 +23,15 @@ function Add() {
             <h2>Magic starts</h2>
           </div>
           <div className="add-video">
-          <Button
-      component="label"
-      role={undefined}
-      variant="contained"
-      tabIndex={-1}
-      onClick={toggleDrawer("right",true)}
-    >
-      <p className="inp-text">+</p>
-    </Button>
+            <Button
+              component="label"
+              role={undefined}
+              variant="contained"
+              tabIndex={-1}
+              onClick={toggleDrawer("right", true)}
+            >
+              <p className="inp-text">+</p>
+            </Button>
           </div>
         </div>
         <div className="arrow">
@@ -43,17 +44,18 @@ function Add() {
             <h2>Magic ends</h2>
           </div>
           <div className="add-video">
-          <Button
-      component="label"
-      role={undefined}
-      variant="contained"
-      tabIndex={-1}
-    >
-  <p className="inp-text">+</p>
-    </Button>
+            <Button
+              component="label"
+              role={undefined}
+              variant="contained"
+              tabIndex={-1}
+            >
+              <p className="inp-text">+</p>
+            </Button>
           </div>
         </div>
       </div>
+      <SpringModal />
       <Starts state={state} toggleDrawer={toggleDrawer} />
     </>
   );
