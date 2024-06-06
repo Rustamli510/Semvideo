@@ -30,37 +30,86 @@
   color: #969696;
 }
 .signIn .signIn-left .inputs .inputs-mid {
-  margin-top: 32px;
+  margin-top: 20px;
 }
-.signIn .signIn-left .inputs .inputs-mid label {
+.signIn .signIn-left .inputs .inputs-mid form {
+  display: flex;
+  flex-direction: column;
+}
+.signIn .signIn-left .inputs .inputs-mid form .inp-div {
+  margin-bottom: 20px;
+}
+.signIn .signIn-left .inputs .inputs-mid form .inp-div .inp-box {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  border-radius: 10px;
+}
+.signIn .signIn-left .inputs .inputs-mid form .inp-box label {
+  position: absolute;
+  color: black;
+  z-index: 2;
+  left: 16px;
+  top: 12px;
+  font: 400 16px "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #9a9a9a;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  padding: 0 5px;
+}
+.signIn .signIn-left .inputs .inputs-mid form .inp-box input {
+  padding: 16px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid #D9D9D9;
+}
+.signIn .signIn-left .inputs .inputs-mid form .inp-box input:focus {
+  outline: 1px solid #367aff;
+}
+.signIn .signIn-left .inputs .inputs-mid form .inp-box input:focus + label {
+  top: -8px;
+  font-size: 12px;
+  color: #367aff;
+}
+.signIn .signIn-left .inputs .inputs-mid form .focusInp {
+  top: -8px !important;
+  font-size: 12px !important;
+  color: #367aff !important;
+}
+.signIn .signIn-left .inputs .inputs-mid form .inp-box svg {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 20px;
+  color: #9a9a9a;
+}
+.signIn .signIn-left .inputs .inputs-mid form .submit {
+  width: 400px;
+  background-color: #367aff;
+  color: #fff;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+.signIn .signIn-left .inputs .inputs-mid form .text-danger-label {
+  color: red !important;
   font-family: "Inter";
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  text-align: left;
 }
-.signIn .signIn-left .inputs .inputs-mid .css-wb57ya-MuiFormControl-root-MuiTextField-root {
-  margin-bottom: 20px;
+.signIn .signIn-left .inputs .inputs-mid form .text-danger {
+  color: red;
+  font-family: "Inter";
+  margin-top: 5px;
 }
-.signIn .signIn-left .inputs .inputs-mid .MuiFormControl-root {
-  margin: 0 0 20px 0;
-  width: 100%;
+.signIn .signIn-left .inputs .inputs-mid form .password-danger {
+  color: red;
+  font-family: "Inter";
+  margin-top: -10px;
 }
-.signIn .signIn-left .inputs .inputs-mid .MuiFormLabel-root {
-  background-color: white;
-  width: 90px;
-}
-.signIn .signIn-left .inputs .inputs-mid .css-1wc848c-MuiFormHelperText-root.Mui-error {
-  margin: 5px 0 0 0;
-}
-.signIn .signIn-left .inputs .inputs-mid .error {
-  color: #d32f2f;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1.66;
-  letter-spacing: 0.03333em;
-  margin: 5px 0 0 0;
+.signIn .signIn-left .inputs .inputs-mid form .border-danger {
+  outline: 1px solid red;
 }
 .signIn .signIn-left .inputs .inputs-bt {
   display: flex;
