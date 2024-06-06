@@ -3,18 +3,20 @@ import '../../Style/Pages/Add.css'
 import { Button } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import Starts from "../Modals/Starts";
+import Ends from "../Modals/Ends";
 import SpringModal from "../WidgetModal";
 
-
 function Add() {
-  const [state, setState] = useState(false);
-  const toggleDrawer = (anchor, open) => (event) => {
+  const [state, setState] = useState({ right: false, showEnds: false });
+
+  const toggleDrawer = (anchor, open, showEnds = false) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
 
-    setState({ ...state, [anchor]: open });
+    setState({ ...state, [anchor]: open, showEnds });
   };
+
   return (
     <>
       <div className="video-boxes">
@@ -28,7 +30,7 @@ function Add() {
               role={undefined}
               variant="contained"
               tabIndex={-1}
-              onClick={toggleDrawer("right", true)}
+              onClick={toggleDrawer("right", true, false)}
             >
               <p className="inp-text">+</p>
             </Button>
@@ -49,6 +51,7 @@ function Add() {
               role={undefined}
               variant="contained"
               tabIndex={-1}
+              onClick={toggleDrawer("right", true, true)}
             >
               <p className="inp-text">+</p>
             </Button>
@@ -56,7 +59,7 @@ function Add() {
         </div>
       </div>
       <SpringModal />
-      <Starts state={state} toggleDrawer={toggleDrawer} />
+      {state.showEnds ? <Ends state={state} toggleDrawer={toggleDrawer} /> : <Starts state={state} toggleDrawer={toggleDrawer} />}
     </>
   );
 }
