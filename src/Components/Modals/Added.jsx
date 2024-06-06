@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "../../Style/Pages/ModalStyle/Added.css";
 import { FaArrowLeft } from "react-icons/fa6";
 import Button from "@mui/material/Button";
-import repeat from "../../assets/İmages/pajamas_repeat.png"
+// import repeat from "../../assets/İmages/pajamas_repeat.png"
 import { VscCalendar } from "react-icons/vsc";
 function Added({ savedVideos }) {
   const videoRef = useRef(null);
@@ -58,7 +58,7 @@ function Added({ savedVideos }) {
               </span>
             </div>
             <p className="x2">2X</p>
-            <img src={repeat} alt="" className="repeat-icon"/>
+            {/* <img src={repeat} alt="" className="repeat-icon"/> */}
             </div>
           </div>
           <div className="controls-bottom">

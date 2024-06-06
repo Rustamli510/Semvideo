@@ -1,3 +1,6 @@
+.starts-modal {
+  transition: ease-in-out 0.3s;
+}
 .starts-modal .close-icon {
   font-size: 29px;
   position: absolute;
