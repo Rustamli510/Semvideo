@@ -1,12 +1,13 @@
 import { Box, Button, Divider, Drawer, List } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import "../../Style/Pages/ModalStyle/Starts.css";
 import { TbReplace } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
+import Added from "./Added";
 
-function Starts({ toggleDrawer, state }) {
+function Starts({ toggleDrawer, state,onAddVideo,savedVideos }) {
   const VisuallyHiddenInput = styled("input")({
     clip: "rect(0 0 0 0)",
     clipPath: "inset(50%)",
@@ -18,6 +19,20 @@ function Starts({ toggleDrawer, state }) {
     whiteSpace: "nowrap",
     width: 1,
   });
+  const [selectedFile, setSelectedFile] = useState(null);
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+    }
+  };
+
+  const handleAddVideoClick = () => {
+    if (selectedFile) {
+      onAddVideo(selectedFile);
+      toggleDrawer("right", false)({ type: 'click' });
+    }
+  };
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
@@ -50,21 +65,22 @@ function Starts({ toggleDrawer, state }) {
               onClick={(event) => event.stopPropagation()}
             >
               replace
-              <VisuallyHiddenInput type="file" />
+              <VisuallyHiddenInput type="file"  onChange={handleFileChange}/>
             </Button>
           </div>
         </div>
         <div className="drawer-create">
-          <button className="dw-btn" >Add semvideo</button>
+          <button className="dw-btn" onClick={handleAddVideoClick} >Add semvideo</button>
         </div>
       </div>
     </Box>
   );
 
   return (
-    <>
+    <>  { (state.showEnds || state.right) && <Added savedVideos={savedVideos} /> }
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
+         
           <Drawer
             anchor={anchor}
             open={state[anchor]}
