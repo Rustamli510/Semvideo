@@ -119,8 +119,6 @@
   margin-right: 10px;
   width: 18px;
   height: 18px;
-  border: 2px 0px 0px 0px;
-  opacity: 0px;
 }
 .signIn .signIn-left .inputs .inputs-bt p {
   font-family: "Inter";
@@ -128,10 +126,8 @@
   font-weight: 500;
   line-height: 24px;
 }
-.signIn .signIn-left .inputs .inputs-sign {
+.signIn .signIn-left .inputs .submit {
   margin-top: 20px;
-}
-.signIn .signIn-left .inputs .inputs-sign .sign-in-button {
   font-family: "Inter";
   font-size: 18px;
   font-weight: 600;

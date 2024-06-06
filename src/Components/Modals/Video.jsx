@@ -1,63 +1,105 @@
-import { Box, Button, Divider, Drawer, List } from "@mui/material";
-import React from "react";
+import { Box, Button, Divider, Drawer } from "@mui/material";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import "../../Style/Pages/ModalStyle/Starts.css";
 import { TbReplace } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
-// import '../../Style/Pages/ModalStyle/Video.css'
+
+const VisuallyHiddenInput = styled("input")({
+  clip: "rect(0 0 0 0)",
+  clipPath: "inset(50%)",
+  height: 1,
+  overflow: "hidden",
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  whiteSpace: "nowrap",
+  width: 1,
+});
 
 function Video({ toggleDrawer, state }) {
-  const VisuallyHiddenInput = styled("input")({
-    clip: "rect(0 0 0 0)",
-    clipPath: "inset(50%)",
-    height: 1,
-    overflow: "hidden",
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    whiteSpace: "nowrap",
-    width: 1,
-  });
+  const [active, setActive] = useState('content1');
+
+  const handleNext = () => {
+    setActive('content2');
+  };
+
+  const handlePrev = () => {
+    setActive('content1')
+  }
+
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
       className="starts-modal"
     >
-        <IoClose className="close-icon" />
+      <IoClose className="close-icon" onClick={toggleDrawer(anchor, false)} />
       <div className="drawer-top">
-        <h1>Video</h1>
+        <h1 onClick={handlePrev} className={active === 'content1' ? 'active' : ''}>Video</h1>
+        <h1 onClick={handleNext} className={active === 'content2' ? 'active' : ''}>Lead</h1>
       </div>
 
       <Divider />
 
       <div className="drawer-bottom">
-        <div className="drawer-file">
-          <p className="drawer-text">
-            How to record and prepare video before uploading. Learn from{" "}
-            <Link>here</Link>
-          </p>
-          <div className="drawer-box">
-            <Button
-              component="label"
-              role={undefined}
-              variant="contained"
-              tabIndex={-1}
-              startIcon={<TbReplace />}
-              className="replace-icon"
-              onClick={(event) => event.stopPropagation()}
-            >
-              replace
-              <VisuallyHiddenInput type="file" />
-            </Button>
+        {active === 'content1' ? (
+          <>
+            <div className="drawer-file">
+              <p className="drawer-text">
+                How to record and prepare video before uploading. Learn from{" "}
+                <Link>here</Link>
+              </p>
+              <div className="drawer-box">
+                <Button
+                  component="label"
+                  role={undefined}
+                  variant="contained"
+                  tabIndex={-1}
+                  startIcon={<TbReplace />}
+                  className="replace-icon"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  replace
+                  <VisuallyHiddenInput type="file" />
+                </Button>
+              </div>
+            </div>
+            <div className="drawer-create">
+              <button className="dw-btn" onClick={handleNext}>Next</button>
+            </div>
+          </>
+        ) : (
+          <div className="lead">
+            <div className="switchs">
+              <div className="switch-section">
+                <h6>Email</h6>
+                <label className="switch">
+                  <input type="checkbox" />
+                  <span className="slider"></span>
+                </label>
+              </div>
+              <div className="switch-section">
+                <h6>Phone</h6>
+                <label className="switch">
+                  <input type="checkbox" />
+                  <span className="slider"></span>
+                </label>
+              </div>
+              <div className="switch-section">
+                <h6>Text</h6>
+                <label className="switch">
+                  <input type="checkbox" />
+                  <span className="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div className="drawer-create">
+              <button className="dw-btn">Finish</button>
+            </div>
           </div>
-        </div>
-        <div className="drawer-create">
-          <button className="dw-btn" >Add semvideo</button>
-        </div>
+        )}
       </div>
     </Box>
   );

@@ -119,6 +119,10 @@ function SignIn() {
                                 </div>
                                 {errors.password && touched.password && <p className="password-danger">{errors.password}</p>}
                             </div>
+                            <div className="inputs-bt">
+                                <input className='check' type="checkbox" name="" id="" />
+                                <p>Keep me logged in</p>
+                            </div>
                             <button type="submit" className="submit">
                                 Submit
                             </button>
