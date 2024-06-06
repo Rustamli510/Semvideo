@@ -10,12 +10,13 @@ function Add() {
   const [state, setState] = useState({ right: false, showEnds: false });
 
   const toggleDrawer = (anchor, open, showEnds = false) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
 
     setState({ ...state, [anchor]: open, showEnds });
   };
+
 
   return (
     <>
@@ -51,10 +52,11 @@ function Add() {
               role={undefined}
               variant="contained"
               tabIndex={-1}
-              onClick={toggleDrawer("right", true, true)}
+              onClick={toggleDrawer('right', true, true)}
             >
               <p className="inp-text">+</p>
             </Button>
+
           </div>
         </div>
       </div>

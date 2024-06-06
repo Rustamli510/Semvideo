@@ -1,0 +1,21 @@
+.drawer{
+    color: white;
+    font-size: 1px;
+    position: absolute;
+    margin-top: -135px;
+    margin-left: 220px;
+    z-index: 99;
+    height: 70px;
+
+    &:hover{
+        background-color: transparent;
+    }
+}
+
+.first-tab{
+    color: red !important;
+}
+
+.MuiTabs-indicator{
+    display: none;
+}
