@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "../../Style/Pages/ModalStyle/Added.css";
 import { FaArrowLeft } from "react-icons/fa6";
 import Button from "@mui/material/Button";
-
+import repeat from "../../assets/İmages/pajamas_repeat.png"
+import { VscCalendar } from "react-icons/vsc";
 function Added({ savedVideos }) {
   const videoRef = useRef(null);
   const [currentTime, setCurrentTime] = useState(0);
@@ -57,8 +58,8 @@ function Added({ savedVideos }) {
               </span>
             </div>
             <p className="x2">2X</p>
+            <img src={repeat} alt="" className="repeat-icon"/>
             </div>
-        
           </div>
           <div className="controls-bottom">
             <Button
@@ -66,7 +67,8 @@ function Added({ savedVideos }) {
               role={undefined}
               variant="contained"
               tabIndex={-1}
-              startIcon=""
+              startIcon={<VscCalendar className="calendar-icon" />}
+              className="added-calendar"
             >
               Get a consultation!
             </Button>
