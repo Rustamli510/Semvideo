@@ -25,8 +25,8 @@
   text-align: left;
   cursor: pointer;
 }
-.starts-modal .drawer-top h1:last-child {
-  margin-left: 25px;
+.starts-modal .drawer-top h1:first-child {
+  margin-right: 25px;
 }
 .starts-modal .drawer-bottom {
   padding: 23px 41px;

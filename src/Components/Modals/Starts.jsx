@@ -43,7 +43,7 @@ function Starts({ toggleDrawer, state,onAddVideo,savedVideos }) {
     >
         <IoClose className="close-icon" />
       <div className="drawer-top">
-        <h1>Video</h1>
+        <h1 className="active">Video</h1>
       </div>
 
       <Divider />
