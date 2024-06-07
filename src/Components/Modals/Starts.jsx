@@ -34,6 +34,10 @@ function Starts({ toggleDrawer, state, onAddVideo, savedVideos }) {
       toggleDrawer("right", false)({ type: 'click' });
     }
   };
+  const handleClose = () => {
+    toggleDrawer('right', false)({ type: 'click' });
+  };
+
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
@@ -85,7 +89,7 @@ function Starts({ toggleDrawer, state, onAddVideo, savedVideos }) {
         toggleDrawer={toggleDrawer}
         onAddVideo={onAddVideo}
       />
-      {(state.showEnds || state.right) && <Added savedVideos={savedVideos} />}
+      {(state.showEnds || state.right) && <Added onClose={handleClose} savedVideos={savedVideos} />}
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
 

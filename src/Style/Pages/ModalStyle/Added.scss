@@ -13,17 +13,17 @@
   }
   .current-inp {
     -webkit-appearance: none;
+    width: 100%;
     height: 4px;
     position: absolute;
-    top: -5px;
-    width: 100%;
-    border-radius: 0px;
-    background-color: #bbbbbb;
-  }
-  .current-inp::-webkit-slider-thumb {
+    top: -3px;
+   outline: none;
+   background-color: #bbb;
+   &::-webkit-slider-thumb{
     -webkit-appearance: none;
-    background-color: #5a8cfe;
     height: 4px;
+    background-color:#5a8cfecc ;
+   }
   }
   .custom-controls {
     display: flex;
@@ -37,6 +37,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+      z-index: 99999;
       .controls-right {
         display: flex;
         .added-time {
@@ -50,6 +51,7 @@
           }
         }
         .x2 {
+          cursor: pointer;
           margin: 0 10px;
           background-color: #e5e5e566;
           color: white;
@@ -57,12 +59,15 @@
           padding: 6px 4px;
         }
         .repeat-icon {
+          cursor: pointer;
           width: 18px;
           height: 18px;
         }
       }
     }
     .added-arrow {
+      
+      cursor: pointer;
       font-size: 24px;
       color: white;
     }
