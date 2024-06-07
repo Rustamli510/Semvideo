@@ -13,6 +13,7 @@
         .inputs {
 
             margin: 0 auto;
+            width: 420px;
 
             .inputs-top {
                 h2 {
@@ -156,6 +157,7 @@
                     .text-danger {
                         color: red;
                         font-family: "Inter";
+                        font-size: 12px;
                         margin-top: 5px;
                     }
 
@@ -163,6 +165,8 @@
                         color: red;
                         font-family: "Inter";
                         margin-top: -10px;
+                        font-size: 12px;
+                        width: 100%;
                     }
 
                     .border-danger {

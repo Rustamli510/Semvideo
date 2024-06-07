@@ -5,6 +5,7 @@ import { styled } from "@mui/material/styles";
 import "../../Style/Pages/ModalStyle/Starts.css";
 import { TbReplace } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
+import Added from "./Added";
 
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
@@ -18,7 +19,7 @@ const VisuallyHiddenInput = styled("input")({
   width: 1,
 });
 
-function Video({ toggleDrawer, state }) {
+function Video({ toggleDrawer, state, savedVideos, onAddVideo }) {
   const [active, setActive] = useState('content1');
 
   const handleNext = () => {
@@ -26,8 +27,15 @@ function Video({ toggleDrawer, state }) {
   };
 
   const handlePrev = () => {
-    setActive('content1')
-  }
+    setActive('content1');
+  };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      onAddVideo(file);
+    }
+  };
 
   const list = (anchor) => (
     <Box
@@ -59,10 +67,9 @@ function Video({ toggleDrawer, state }) {
                   tabIndex={-1}
                   startIcon={<TbReplace />}
                   className="replace-icon"
-                  onClick={(event) => event.stopPropagation()}
                 >
                   replace
-                  <VisuallyHiddenInput type="file" />
+                  <VisuallyHiddenInput type="file" onChange={handleFileChange} />
                 </Button>
               </div>
             </div>
@@ -106,6 +113,7 @@ function Video({ toggleDrawer, state }) {
 
   return (
     <>
+      {state.showEnds && <Added savedVideos={savedVideos} />}
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Drawer

@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
-import Video from './Video'
+import React from "react";
+import Video from "./Video";
 
-function Ends({ toggleDrawer, state }) {
-    return (
-        <div>
-            <Video toggleDrawer={toggleDrawer} state={state} />
-        </div>
-    )
+function Ends({ savedVideos, state, toggleDrawer, onAddVideo }) {
+  return (
+    <div>
+      <Video 
+        savedVideos={savedVideos} 
+        state={state} 
+        toggleDrawer={toggleDrawer} 
+        onAddVideo={onAddVideo} 
+      />
+    </div>
+  );
 }
 
 export default Ends;

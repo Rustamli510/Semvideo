@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../../Style/Pages/Add.css'
+import '../../Style/Pages/Add.css';
 import { Button } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import Starts from "../Modals/Starts";
@@ -9,6 +9,7 @@ import SpringModal from "../WidgetModal";
 function Add() {
   const [state, setState] = useState({ right: false, showEnds: false });
   const [savedVideos, setSavedVideos] = useState([]);
+  
   const toggleDrawer = (anchor, open, showEnds = false) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -16,11 +17,14 @@ function Add() {
 
     setState({ ...state, [anchor]: open, showEnds });
   };
+
   const handleAddVideo = (file) => {
     const url = URL.createObjectURL(file);
     setSavedVideos([...savedVideos, url]);
   };
- console.log(savedVideos);
+
+  console.log(savedVideos);
+
   return (
     <>
       <div className="video-boxes">
@@ -59,12 +63,25 @@ function Add() {
             >
               <p className="inp-text">+</p>
             </Button>
-
           </div>
         </div>
       </div>
       <SpringModal />
-      {state.showEnds ? <Ends state={state} toggleDrawer={toggleDrawer} /> : <Starts savedVideos={savedVideos} state={state} toggleDrawer={toggleDrawer} onAddVideo={handleAddVideo} />}
+      {state.showEnds ? (
+        <Ends 
+          savedVideos={savedVideos} 
+          state={state} 
+          toggleDrawer={toggleDrawer} 
+          onAddVideo={handleAddVideo}
+        />
+      ) : (
+        <Starts 
+          savedVideos={savedVideos} 
+          state={state} 
+          toggleDrawer={toggleDrawer} 
+          onAddVideo={handleAddVideo}
+        />
+      )}
     </>
   );
 }

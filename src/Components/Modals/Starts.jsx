@@ -6,8 +6,9 @@ import "../../Style/Pages/ModalStyle/Starts.css";
 import { TbReplace } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
 import Added from "./Added";
+import Video from "./Video";
 
-function Starts({ toggleDrawer, state,onAddVideo,savedVideos }) {
+function Starts({ toggleDrawer, state, onAddVideo, savedVideos }) {
   const VisuallyHiddenInput = styled("input")({
     clip: "rect(0 0 0 0)",
     clipPath: "inset(50%)",
@@ -41,7 +42,7 @@ function Starts({ toggleDrawer, state,onAddVideo,savedVideos }) {
       onKeyDown={toggleDrawer(anchor, false)}
       className="starts-modal"
     >
-        <IoClose className="close-icon" />
+      <IoClose className="close-icon" />
       <div className="drawer-top">
         <h1 className="active">Video</h1>
       </div>
@@ -65,7 +66,7 @@ function Starts({ toggleDrawer, state,onAddVideo,savedVideos }) {
               onClick={(event) => event.stopPropagation()}
             >
               replace
-              <VisuallyHiddenInput type="file"  onChange={handleFileChange}/>
+              <VisuallyHiddenInput type="file" onChange={handleFileChange} />
             </Button>
           </div>
         </div>
@@ -77,10 +78,17 @@ function Starts({ toggleDrawer, state,onAddVideo,savedVideos }) {
   );
 
   return (
-    <>  { (state.showEnds || state.right) && <Added savedVideos={savedVideos} /> }
+    <>
+      <Video
+        savedVideos={savedVideos}
+        state={state}
+        toggleDrawer={toggleDrawer}
+        onAddVideo={onAddVideo}
+      />
+      {(state.showEnds || state.right) && <Added savedVideos={savedVideos} />}
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
-         
+
           <Drawer
             anchor={anchor}
             open={state[anchor]}

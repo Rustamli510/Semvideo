@@ -12,6 +12,7 @@
 }
 .signIn .signIn-left .inputs {
   margin: 0 auto;
+  width: 420px;
 }
 .signIn .signIn-left .inputs .inputs-top h2 {
   font-family: "Inter";
@@ -101,12 +102,15 @@
 .signIn .signIn-left .inputs .inputs-mid form .text-danger {
   color: red;
   font-family: "Inter";
+  font-size: 12px;
   margin-top: 5px;
 }
 .signIn .signIn-left .inputs .inputs-mid form .password-danger {
   color: red;
   font-family: "Inter";
   margin-top: -10px;
+  font-size: 12px;
+  width: 100%;
 }
 .signIn .signIn-left .inputs .inputs-mid form .border-danger {
   outline: 1px solid red;
