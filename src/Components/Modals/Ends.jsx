@@ -1,6 +1,6 @@
 import { Box, Button, Divider, Drawer } from "@mui/material";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import "../../Style/Pages/ModalStyle/Starts.css";
 import { TbReplace } from "react-icons/tb";
@@ -21,6 +21,11 @@ const VisuallyHiddenInput = styled("input")({
 
 function Ends({ toggleDrawer, state, savedVideos, onAddVideo }) {
   const [active, setActive] = useState('content1');
+  const navigate = useNavigate();
+
+  const handleFinish = () => {
+    navigate('/dashboard/innerdashboard');
+  };
 
   const handleNext = () => {
     setActive('content2');
@@ -105,7 +110,7 @@ function Ends({ toggleDrawer, state, savedVideos, onAddVideo }) {
               </div>
             </div>
             <div className="drawer-create">
-              <button className="dw-btn">Finish</button>
+              <button className="dw-btn" onClick={handleFinish}>Finish</button>
             </div>
           </div>
         )}

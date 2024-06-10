@@ -1,15 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, {  useState } from "react";
 import "../../Style/Pages/Add.css";
 import { Button } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import Starts from "../Modals/Starts";
 import Ends from "../Modals/Ends";
 import SpringModal from "../WidgetModal";
-import { AppContext } from "../../Context/Context";
 
-function Add() {
+function Add({savedVideos,handleAddVideo}) {
   const [state, setState] = useState({ right: false, showEnds: false });
-  const [savedVideos, setSavedVideos] = useState([]);
+ 
 
   const toggleDrawer =
     (anchor, open, showEnds = false) =>
@@ -25,16 +24,11 @@ function Add() {
       setState({ ...state, [anchor]: open, showEnds });
     };
 
-  const handleAddVideo = (file) => {
-    const url = URL.createObjectURL(file);
-    setSavedVideos([...savedVideos, url]);
-  };
-  const { dashClicked,clas } = useContext(AppContext);
+
   return (
     <>
       <div
         className="video-boxes"
-        style={{ display: dashClicked ? clas : "" }}
       >
         <div className="video-box">
           <div className="box-text">

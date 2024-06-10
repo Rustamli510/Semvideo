@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: auto auto;
   gap: 115px;
-
   .inner-box {
     width: 378px;
     height: 336px;
@@ -22,19 +21,82 @@
           font-weight: 700;
           line-height: 21px;
           letter-spacing: -0.06428569555282593px;
-          
         }
       }
-
+      .top-text{
+        padding-bottom: 20px;
+      }
       p {
-        font-family: 'Poppins';
-        font-size: 10px;
+        color: #919194;
+        font-family: "Poppins";
+        font-size: 12px;
         font-weight: 400;
-        line-height: 15px;
+        line-height: 18px;
         letter-spacing: -0.06428569555282593px;
         text-align: left;
-        margin-top: 14px;
+      }
+      .inner-video {
+        display: flex;
+        background-color: #eff0ff;
+        width: 154px;
+        height: 167px;
+        video {
+          width: 100%;
+          height: 167px;
+        }
+        .video-top-form {
+          width: 182px;
+          border-radius: 0px 0px 20px 20px;
+          background-color: white;
+          h5 {
+            font-family: Poppins;
+            font-size: 8px;
+            font-weight: 300;
+            line-height: 10.5px;
+            text-align: center;
+            padding-top: 20px;
+          }
+        }
+        .video-bottom-form {
+          width: 182px;
+          height: 161px;
+          top: 47px;
+          left: -2px;
+          gap: 0px;
+          border-radius: 20px 20px 0px 0px;
+          opacity: 0px;
+          background-color: white;
+          .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+            font-family: Poppins;
+            font-size: 7px;
+            font-weight: 300;
+            line-height: 10.5px;
+            text-align: left;
+            color: #cecef6 !important;
+            padding: 7px 0;
+          }
+          .css-1x51dt5-MuiInputBase-input-MuiInput-input {
+          padding: 0 !important;
+          }
+          textarea {
+            margin-top: 10px !important;
+            border: none;
+            max-width: 182px;
+            resize: none;
+        
+            &::placeholder{
+                font-size: 7px;
+                color: #cecef6;
+            }
+          }
+        }
       }
     }
   }
 }
+.bottom-text{
+ padding-top: 24px;       
+}
+.css-1jw38dy>:not(style){
+    margin: 0 0 0 8px !important;
+  }
