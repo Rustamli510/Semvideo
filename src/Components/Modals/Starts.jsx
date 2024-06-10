@@ -6,7 +6,6 @@ import "../../Style/Pages/ModalStyle/Starts.css";
 import { TbReplace } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
 import Added from "./Added";
-import Video from "./Video";
 
 function Starts({ toggleDrawer, state, onAddVideo, savedVideos }) {
   const VisuallyHiddenInput = styled("input")({
@@ -31,11 +30,11 @@ function Starts({ toggleDrawer, state, onAddVideo, savedVideos }) {
   const handleAddVideoClick = () => {
     if (selectedFile) {
       onAddVideo(selectedFile);
-      toggleDrawer("right", false)({ type: 'click' });
+      toggleDrawer("right", false)({ type: "click" });
     }
   };
   const handleClose = () => {
-    toggleDrawer('right', false)({ type: 'click' });
+    toggleDrawer("right", false)({ type: "click" });
   };
 
   const list = (anchor) => (
@@ -75,7 +74,9 @@ function Starts({ toggleDrawer, state, onAddVideo, savedVideos }) {
           </div>
         </div>
         <div className="drawer-create">
-          <button className="dw-btn" onClick={handleAddVideoClick} >Add semvideo</button>
+          <button className="dw-btn" onClick={handleAddVideoClick}>
+            Add semvideo
+          </button>
         </div>
       </div>
     </Box>
@@ -83,16 +84,11 @@ function Starts({ toggleDrawer, state, onAddVideo, savedVideos }) {
 
   return (
     <>
-      <Video
-        savedVideos={savedVideos}
-        state={state}
-        toggleDrawer={toggleDrawer}
-        onAddVideo={onAddVideo}
-      />
-      {(state.showEnds || state.right) && <Added onClose={handleClose} savedVideos={savedVideos} />}
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
-
+          {(state.showEnds || state.right) && (
+            <Added onClose={handleClose} savedVideos={savedVideos} />
+          )}
           <Drawer
             anchor={anchor}
             open={state[anchor]}

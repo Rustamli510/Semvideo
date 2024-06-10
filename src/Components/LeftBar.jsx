@@ -8,7 +8,6 @@ import { useContext } from "react";
 import { AppContext } from "../Context/Context";
 import TransitionsModal from "./HelpModal";
 function LeftBar() {
-  const { handleClick } = useContext(AppContext)
   return (
     <>
       <div className="left-bar">
@@ -18,17 +17,16 @@ function LeftBar() {
           </div>
           <div className="add-video">
             <div className="left-text">
-              <img src={frame} alt="" />
+              <Link to="/dashboard/innerdashboard">
+                <img src={frame} alt="" />{" "}
+              </Link>
             </div>
-            <button className="add-btn" onClick={handleClick}>
+            <Link to="/dashboard/add" className="add-btn">
               Add semvideo
-            </button>
+            </Link>
           </div>
         </div>
         <div className="nav-bottom">
-          {/* <button className="nav-bottom-text">
-            <IoHelpCircleOutline className="icon" /> Let us help
-          </button> */}
           <TransitionsModal className="nav-bottom-text" />
           <Link className="nav-bottom-text">
             <HiOutlineEmojiSad className="icon" /> Log out

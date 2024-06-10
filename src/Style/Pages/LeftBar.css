@@ -12,6 +12,7 @@
   align-items: center;
 }
 .left-bar .nav-top .add-video .add-btn {
+  display: inline-block;
   margin-left: 20px;
   border: none;
   background-color: #367aff;

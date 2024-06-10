@@ -2,10 +2,10 @@ import React from "react";
 import boxfoto from "../../assets/İmages/arcticons_game-space.png";
 import "../../Style/Pages/Box.css";
 
+
 function Box() {
   return (
-    <>
-      <div className="box">
+      <div className="box" >
         <div className="box-top">
           <h3>
             You need to increase your conversion rate in your website. Guess
@@ -17,7 +17,6 @@ function Box() {
           <img src={boxfoto} alt="" />
         </div>
       </div>
-    </>
   );
 }
 

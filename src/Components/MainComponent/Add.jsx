@@ -1,33 +1,41 @@
-import React, { useState } from "react";
-import '../../Style/Pages/Add.css';
+import React, { useContext, useState } from "react";
+import "../../Style/Pages/Add.css";
 import { Button } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import Starts from "../Modals/Starts";
 import Ends from "../Modals/Ends";
 import SpringModal from "../WidgetModal";
+import { AppContext } from "../../Context/Context";
 
 function Add() {
   const [state, setState] = useState({ right: false, showEnds: false });
   const [savedVideos, setSavedVideos] = useState([]);
-  
-  const toggleDrawer = (anchor, open, showEnds = false) => (event) => {
-    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
 
-    setState({ ...state, [anchor]: open, showEnds });
-  };
+  const toggleDrawer =
+    (anchor, open, showEnds = false) =>
+    (event) => {
+      if (
+        event &&
+        event.type === "keydown" &&
+        (event.key === "Tab" || event.key === "Shift")
+      ) {
+        return;
+      }
+
+      setState({ ...state, [anchor]: open, showEnds });
+    };
 
   const handleAddVideo = (file) => {
     const url = URL.createObjectURL(file);
     setSavedVideos([...savedVideos, url]);
   };
-
-  console.log(savedVideos);
-
+  const { dashClicked,clas } = useContext(AppContext);
   return (
     <>
-      <div className="video-boxes">
+      <div
+        className="video-boxes"
+        style={{ display: dashClicked ? clas : "" }}
+      >
         <div className="video-box">
           <div className="box-text">
             <h2>Magic starts</h2>
@@ -59,7 +67,7 @@ function Add() {
               role={undefined}
               variant="contained"
               tabIndex={-1}
-              onClick={toggleDrawer('right', true, true)}
+              onClick={toggleDrawer("right", true, true)}
             >
               <p className="inp-text">+</p>
             </Button>
@@ -68,17 +76,17 @@ function Add() {
       </div>
       <SpringModal />
       {state.showEnds ? (
-        <Ends 
-          savedVideos={savedVideos} 
-          state={state} 
-          toggleDrawer={toggleDrawer} 
+        <Ends
+          savedVideos={savedVideos}
+          state={state}
+          toggleDrawer={toggleDrawer}
           onAddVideo={handleAddVideo}
         />
       ) : (
-        <Starts 
-          savedVideos={savedVideos} 
-          state={state} 
-          toggleDrawer={toggleDrawer} 
+        <Starts
+          savedVideos={savedVideos}
+          state={state}
+          toggleDrawer={toggleDrawer}
           onAddVideo={handleAddVideo}
         />
       )}

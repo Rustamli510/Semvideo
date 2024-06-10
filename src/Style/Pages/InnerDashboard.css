@@ -1,0 +1,33 @@
+.inner-boxs {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 115px;
+}
+.inner-boxs .inner-box {
+  width: 378px;
+  height: 336px;
+  border-radius: 12px;
+  background-color: white;
+  padding: 14px 18px 30px 30px;
+}
+.inner-boxs .inner-box .inner-box-header .inner-box-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner-boxs .inner-box .inner-box-header .inner-box-header-top h4 {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.0642856956px;
+}
+.inner-boxs .inner-box .inner-box-header p {
+  font-family: "Poppins";
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: -0.0642856956px;
+  text-align: left;
+  margin-top: 14px;
+}/*# sourceMappingURL=InnerDashboard.css.map */

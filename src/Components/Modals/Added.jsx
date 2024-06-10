@@ -60,6 +60,7 @@ function Added({ savedVideos, onClose }) {
     }
   };
 
+
   return (
     <>
       <div className="added-video">
@@ -73,7 +74,6 @@ function Added({ savedVideos, onClose }) {
             min="0"
             max="100"
             value={rangeValue}
-            readOnly
           />
           <div className="controls-top">
             <FaArrowLeft className="added-arrow" onClick={handleClose} />
@@ -107,7 +107,9 @@ function Added({ savedVideos, onClose }) {
             </Button>
           </div>
         </div>
+      <input type="text" />
       </div>
+
     </>
   );
 }

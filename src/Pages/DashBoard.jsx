@@ -2,14 +2,11 @@ import React from "react";
 import LeftBar from "../Components/LeftBar";
 import Main from "../Components/Main";
 
-
-
 function DashBoard() {
-
   return (
-    <div className="dashbroad" style={{ display: "flex" }}>
+    <div className="dashboard" style={{ display: "flex" }}>
       <LeftBar />
-        <Main />
+      <Main />
     </div>
   );
 }
