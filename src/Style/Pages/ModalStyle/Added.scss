@@ -88,5 +88,21 @@
         text-align: left;
       }
     }
+
+    .MuiLinearProgress-root {
+      height: 4px;
+      background-color: #bbb;
+  
+      .MuiLinearProgress-bar {
+        background-color: #5a8cfecc;
+      }
+    }
+
+    .css-1qaf1kb {
+      margin: 0;
+      position: absolute;
+      top: -5px;
+
+    }
   }
 }

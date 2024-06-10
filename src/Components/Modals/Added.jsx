@@ -4,6 +4,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 import Button from "@mui/material/Button";
 import repeat from "../../assets/İmages/pajamas_repeat.png";
 import { VscCalendar } from "react-icons/vsc";
+import { Box, LinearProgress } from "@mui/material";
 
 function Added({ savedVideos, onClose }) {
   const videoRef = useRef(null);
@@ -68,13 +69,9 @@ function Added({ savedVideos, onClose }) {
           <source src={savedVideos} type="video/mp4" />
         </video>
         <div className="custom-controls">
-          <input
-            className="current-inp"
-            type="range"
-            min="0"
-            max="100"
-            value={rangeValue}
-          />
+          <Box sx={{ width: '100%', marginTop: '10px' }}>
+            <LinearProgress variant="determinate" value={(currentTime / duration) * 100} />
+          </Box>
           <div className="controls-top">
             <FaArrowLeft className="added-arrow" onClick={handleClose} />
             <div className="controls-right">
@@ -107,9 +104,7 @@ function Added({ savedVideos, onClose }) {
             </Button>
           </div>
         </div>
-      <input type="text" />
       </div>
-
     </>
   );
 }

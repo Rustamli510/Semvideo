@@ -83,4 +83,16 @@
   font-weight: 400;
   line-height: 14.52px;
   text-align: left;
+}
+.added-video .custom-controls .MuiLinearProgress-root {
+  height: 4px;
+  background-color: #bbb;
+}
+.added-video .custom-controls .MuiLinearProgress-root .MuiLinearProgress-bar {
+  background-color: rgba(90, 140, 254, 0.8);
+}
+.added-video .custom-controls .css-1qaf1kb {
+  margin: 0;
+  position: absolute;
+  top: -5px;
 }/*# sourceMappingURL=Added.css.map */
