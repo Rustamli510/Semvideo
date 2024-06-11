@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Drawer } from "@mui/material";
+import { Box, Button, Divider, Drawer, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
@@ -102,10 +102,11 @@ function Video({ toggleDrawer, state, savedVideos, onAddVideo }) {
                   <input type="checkbox" />
                   <span className="slider"></span>
                 </label>
-              </div>
             </div>
+              </div>
             <div className="drawer-create">
               <button className="dw-btn">Finish</button>
+
             </div>
           </div>
         )}

@@ -43,8 +43,7 @@ function All() {
             path="add"
             element={<Add handleAddVideo={handleAddVideo} savedVideos={savedVideos} />}
           />
-          <Route
-            path="innerdashboard"
+          <Route path="innerdashboard"
             element={<InnerDashboad savedVideos={savedVideos} handleDeleteVideo={handleDeleteVideo} />}
           />
         </Route>

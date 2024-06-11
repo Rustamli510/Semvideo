@@ -1,11 +1,15 @@
 .inner-boxes-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: space-between;
   padding: 20px;
 }
-
-.inner-box {
+.inner-boxes-container .inner-boxs {
+  display: flex;
+  justify-content: center;
+}
+.inner-boxes-container .inner-boxs .inner-box {
   width: 100%;
   max-width: 378px;
   height: 336px;
@@ -13,30 +17,25 @@
   background-color: white;
   padding: 14px 18px 30px 30px;
 }
-
-.inner-box-header {
+.inner-boxes-container .inner-boxs .inner-box .inner-box-header {
   margin-bottom: 20px;
 }
-
-.inner-box-header-top {
+.inner-boxes-container .inner-boxs .inner-box .inner-box-header .inner-box-header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.inner-box-header h4 {
+.inner-boxes-container .inner-boxs .inner-box .inner-box-header h4 {
   font-family: "Poppins";
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
   letter-spacing: -0.0642857px;
 }
-
-.top-text {
+.inner-boxes-container .inner-boxs .inner-box .top-text {
   padding-bottom: 20px;
 }
-
-p {
+.inner-boxes-container .inner-boxs .inner-box p {
   color: #919194;
   font-family: "Poppins";
   font-size: 12px;
@@ -45,32 +44,27 @@ p {
   letter-spacing: -0.0642857px;
   text-align: left;
 }
-
-.inner-video {
+.inner-boxes-container .inner-boxs .inner-box .inner-video {
   display: flex;
   background-color: #eff0ff;
   width: 100%;
   height: 167px;
 }
-
-.inner-video video {
+.inner-boxes-container .inner-boxs .inner-box .inner-video video {
   width: 154px;
   height: 167px;
 }
-
-.video-right {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.video-top-form {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-top-form {
   width: 100%;
   border-radius: 0 0 15px 15px;
   background-color: white;
 }
-
-.video-top-form h5 {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-top-form h5 {
   font-family: "Poppins";
   font-size: 8px;
   font-weight: 300;
@@ -78,16 +72,14 @@ p {
   text-align: center;
   padding: 10px 0;
 }
-
-.video-bottom-form {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-bottom-form {
   padding: 0 13px;
   width: 100%;
   height: 161px;
   border-radius: 20px 20px 0 0;
   background-color: white;
 }
-
-.video-bottom-form .MuiFormLabel-root {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-bottom-form .MuiFormLabel-root {
   font-family: "Poppins";
   font-size: 7px;
   font-weight: 300;
@@ -96,36 +88,34 @@ p {
   color: #cecef6 !important;
   padding: 7px 0;
 }
-
-.video-bottom-form .MuiInputBase-input {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-bottom-form .MuiInputBase-input {
   padding: 0 !important;
 }
-
-textarea {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-bottom-form .css-1u3bzj6-MuiFormControl-root-MuiTextField-root:nth-child(2) {
+  margin-top: -12px;
+}
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-bottom-form textarea {
   margin-top: 10px !important;
   border: none;
   max-width: 100%;
   resize: none;
 }
-
-textarea::-moz-placeholder {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-bottom-form textarea::-moz-placeholder {
   font-size: 7px;
   color: #cecef6;
 }
-
-textarea::placeholder {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .video-bottom-form textarea::placeholder {
   font-size: 7px;
   color: #cecef6;
 }
-
-.generate {
+.inner-boxes-container .inner-boxs .inner-box .inner-video .video-right .generate {
   padding-top: 24px;
 }
-
-.bottom-text {
+.inner-boxes-container .inner-boxs .inner-box .bottom-text {
   font-family: "Poppins";
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   text-align: left;
+  margin-top: 30px;
 }/*# sourceMappingURL=InnerDashboard.css.map */
