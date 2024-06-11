@@ -55,11 +55,6 @@
   display: flex;
   align-items: center;
   color: #616167;
-  font-family: "Poppins";
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
   border: none;
   background-color: transparent;
   text-transform: none;
@@ -69,4 +64,12 @@
   margin-left: -9px;
   width: 21px;
   height: 21px;
+}
+.left-bar .nav-bottom button p {
+  font-family: "Poppins";
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #616167;
 }/*# sourceMappingURL=LeftBar.css.map */
