@@ -104,6 +104,7 @@ function Added({ savedVideos, onClose }) {
             </Button>
           </div>
         </div>
+        <input type="text" />
       </div>
     </>
   );
